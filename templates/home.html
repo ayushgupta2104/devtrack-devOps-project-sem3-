@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}DevTrack | Learn DevOps{% endblock %}
+
+{% block content %}
+<div class="wrap">
+  <section class="hero">
+    <div>
+      <h1>Build your DevOps skills, one step at a time.</h1>
+      <p>DevTrack turns key concepts into a clear learning path, from DevOps basics to Git, GitHub and CI/CD.</p>
+      <div class="actions">
+        <a class="btn primary" href="{{ url_for('lessons') }}">Explore learning modules</a>
+        <a class="btn ghost" href="#path">See what you will learn</a>
+      </div>
+    </div>
+
+    <aside class="pipeline" aria-label="Example CI/CD pipeline">
+      <h2>Your first pipeline</h2>
+      <p>From commit to deploy, fully automated.</p>
+      <div class="step" style="--i:0"><i class="dot"></i><div><b>Commit</b><small>Push your code to GitHub</small></div></div>
+      <div class="step" style="--i:1"><i class="dot"></i><div><b>Build</b><small>Package the application</small></div></div>
+      <div class="step" style="--i:2"><i class="dot"></i><div><b>Test</b><small>Run automated checks</small></div></div>
+      <div class="step ops" style="--i:3"><i class="dot"></i><div><b>Deploy</b><small>Ship it to production</small></div></div>
+    </aside>
+  </section>
+
+  <section class="path" id="path">
+    <h2 class="section-title">Four modules, one clear path.</h2>
+    <div class="path-row">
+      <div class="pt"><span>Module 1</span><h3>DevOps fundamentals</h3><p>Principles, benefits and the DevOps lifecycle.</p></div>
+      <div class="pt"><span>Module 2</span><h3>Version control</h3><p>Repositories, commits and collaboration.</p></div>
+      <div class="pt"><span>Module 3</span><h3>Git and GitHub</h3><p>Branches, push, pull, merging and pull requests.</p></div>
+      <div class="pt" style="--c: var(--ops)"><span>Module 4</span><h3>CI/CD fundamentals</h3><p>Automated building, testing and deployment.</p></div>
+    </div>
+  </section>
+</div>
+{% endblock %}
